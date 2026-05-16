@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>SCP Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>SCP CREATOR</h1>
+    <a href="/">VIEW</a>
+</header>
+
+<input type="hidden" id="editId">
+
+<div class="form">
+
+    <input id="number" placeholder="SCP szám">
+    <input id="name" placeholder="Név">
+    <input id="class" placeholder="Class">
+
+    <select id="containment">
+        <option>Low Containment Zone</option>
+        <option>High Containment Zone</option>
+    </select>
+
+    <select id="status">
+        <option>Stabil</option>
+        <option>Megfigyelés alatt</option>
+        <option>Kritikus</option>
+    </select>
+
+    <textarea id="description" placeholder="Leírás"></textarea>
+    <textarea id="notes" placeholder="Protokoll"></textarea>
+
+    <button onclick="saveSCP()">MENTÉS</button>
+
+</div>
+
+<div class="search">
+    <input id="searchBar" placeholder="Keresés...">
+</div>
+
+<div id="scpList"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="creator.js"></script>
+
+</body>
+</html>
